@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Is it friday?
+{% endblock %}
+
+{% block body %}
+
+<div class="question">Is it Friday?</div>
+{% if nights_to_sleep == 0 %}
+<div class="answer yes">YES!</div>
+{% else %}
+<div class="answer no">NO</div>
+<div class="nts">Just {{ nights_to_sleep }} more night{{ 's' if nights_to_sleep > 1 }} of sleep to go.</div>
+{% endif %}
+{% endblock %}

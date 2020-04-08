@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Oswald:wght@700&display=swap');
+
+html {
+  font-family: 'EB Garamond', serif;
+  font-size: 5vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.question {
+  font-family: 'Oswald', sans-serif;
+  font-size: 7.5vh;
+}
+
+.answer {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20vh;
+}
+
+.answer.no {
+  color: red;
+} 
+
+.answer.yes {
+  color: green;
+}
+

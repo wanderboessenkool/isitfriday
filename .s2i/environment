@@ -1,0 +1,2 @@
+APP_MODULE=app:create_app()
+WEB_CONCURRENCY=4
