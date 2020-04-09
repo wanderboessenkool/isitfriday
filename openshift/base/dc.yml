@@ -1,0 +1,46 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: isitfriday
+    app.kubernetes.io/component: isitfriday
+    app.kubernetes.io/instance: isitfriday
+  name: isitfriday
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    deploymentconfig: isitfriday
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        deploymentconfig: isitfriday
+    spec:
+      containers:
+      - image: ' '
+        imagePullPolicy: Always
+        name: isitfriday
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - isitfriday
+      from:
+        kind: ImageStreamTag
+        name: isitfriday:latest
+        namespace: isitfriday
+    type: ImageChange

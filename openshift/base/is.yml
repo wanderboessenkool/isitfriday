@@ -1,0 +1,8 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: isitfriday
+    app.kubernetes.io/component: isitfriday
+    app.kubernetes.io/instance: isitfriday
+  name: isitfriday

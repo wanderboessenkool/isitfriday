@@ -1,0 +1,6 @@
+resources:
+- dc.yml
+- is.yml
+- route.yml
+- svc.yml
+namespace: isitfriday

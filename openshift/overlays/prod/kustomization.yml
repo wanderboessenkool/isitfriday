@@ -1,0 +1,15 @@
+bases:
+- ../../base
+
+namespace: isitfriday-prod
+
+resources:
+- ns.yml
+
+patchesJson6902:
+- target:
+    group: apps.openshift.io
+    version: v1
+    kind: DeploymentConfig
+    name: isitfriday
+  path: dc-imagechange-patch.yml

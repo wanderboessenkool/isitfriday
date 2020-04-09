@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: isitfriday
+    app.kubernetes.io/component: isitfriday
+    app.kubernetes.io/instance: isitfriday
+  name: isitfriday
+spec:
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    deploymentconfig: isitfriday
+  sessionAffinity: None
+  type: ClusterIP

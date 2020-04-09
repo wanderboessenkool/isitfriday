@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: isitfriday
+    app.kubernetes.io/component: isitfriday
+    app.kubernetes.io/instance: isitfriday
+  name: isitfriday
+spec:
+  port:
+    targetPort: 8080-tcp
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: isitfriday
+    weight: 100
+  wildcardPolicy: None
