@@ -3,9 +3,6 @@ bases:
 
 namespace: isitfriday-prod
 
-resources:
-- ns.yml
-
 patchesJson6902:
 - target:
     group: apps.openshift.io
