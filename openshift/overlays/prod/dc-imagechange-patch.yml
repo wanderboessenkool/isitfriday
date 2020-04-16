@@ -1,3 +1,0 @@
-- op: replace
-  path: /spec/triggers/1/imageChangeParams/from/namespace
-  value: isitfriday-prod

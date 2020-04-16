@@ -1,6 +1,7 @@
 resources:
-- dc.yml
+- deploy.yml
 - is.yml
 - route.yml
 - svc.yml
+
 namespace: isitfriday
