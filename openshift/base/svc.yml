@@ -13,6 +13,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    deploymentconfig: isitfriday
+    deployment: isitfriday
   sessionAffinity: None
   type: ClusterIP
