@@ -11,8 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #efefef;
-  color: black;
+  background-color: black;
+  color: #efefef;
 }
 
 .question {
