@@ -3,6 +3,12 @@ kind: ImageStream
 metadata:
   labels:
     app: isitfriday
-    app.kubernetes.io/component: isitfriday
     app.kubernetes.io/instance: isitfriday
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/part-of: isitifriday
+    app.kubernetes.io/name: flask
+    app.kubernetes.io/instance: isitfriday-frontend
+    app.kubernetes.io/managed-by: tekton
+    app.openshift.io/runtime: python
+    app.openshift.io/runtime-version: 3.6
   name: isitfriday
