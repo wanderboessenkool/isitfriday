@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/instance: isitfriday-frontend
     app.kubernetes.io/managed-by: tekton
     app.openshift.io/runtime: python
-    app.openshift.io/runtime-version: 3.6
+    app.openshift.io/runtime-version: "3.6"
   name: isitfriday
 spec:
   replicas: 2
